@@ -5,13 +5,15 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Demo struts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Demo!</title>
 </head>
 
 <body>
-    <h1>Welcome To Web Application!</h1>
-    <a href="<s:url action='firstAction'/>">First Action</a>
+    <h1>Demo Struts 2</h1>
+    <h2>
+        <s:property value="messageStore.message" />
+    </h2>
 </body>
 
 </html>

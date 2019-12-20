@@ -10,9 +10,38 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
+		<struts2.version>2.5.20</struts2.version>
+		<log4j2.version>2.13.0</log4j2.version>
 	</properties>
+	
+	<dependencyManagement>
+      <dependencies>
+          <dependency>
+              <groupId>org.apache.struts</groupId>
+              <artifactId>struts2-bom</artifactId>
+              <version>${struts2.version}</version>
+              <type>pom</type>
+              <scope>import</scope>
+          </dependency>
+          <dependency>
+              <groupId>org.apache.logging.log4j</groupId>
+              <artifactId>log4j-bom</artifactId>
+              <version>${log4j2.version}</version>
+              <scope>import</scope>
+              <type>pom</type>
+          </dependency>
+        </dependencies>
+  </dependencyManagement>
 
   <dependencies>
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-core</artifactId>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.struts</groupId>
+          <artifactId>struts2-core</artifactId>
+      </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
